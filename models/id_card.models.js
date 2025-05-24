@@ -25,4 +25,4 @@ const idCardSchema = new mongoose.Schema({
     }, // URL or path to generated PDF/Image of ID card
 });
 
-module.exports = mongoose.model('IdCard', idCardSchema);
+export default mongoose.model('IdCard', idCardSchema);

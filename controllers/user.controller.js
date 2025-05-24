@@ -1,8 +1,8 @@
 import crypto from "crypto";
-import User from "../models/User.js";
+import User from "../models/user.models.js";
 import { uploadImageToCloudinary } from "../utilities/cloudinary.js";
 import { generateIdCardPDF } from "../utilities/idCardGenerator.js";
-import { transporter } from "../utilities/nodemailer.js";
+import { transporter } from "../utilities/transporter.js";
 import fs from "fs";
 
 function generateDigitalId() {
