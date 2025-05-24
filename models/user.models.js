@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    program: {
+    course: {
         type: String,
         required: true
     },
@@ -36,6 +36,11 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    role: {
+        type: String,
+        default: "student",
+        enum: ["admin", "student"]
+    }
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', userSchema);
