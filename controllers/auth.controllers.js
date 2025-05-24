@@ -33,8 +33,6 @@ export const registerUser = async (req, res) => {
     }
 };
 
-
-
 // Login Api 
 export const signIn = async (req, res) => {
     try {
