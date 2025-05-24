@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const chatSchema = new mongoose.Schema({
     userId: {
@@ -32,6 +32,6 @@ const chatSchema = new mongoose.Schema({
         enum: ['Dialogflow', 'Gemini'],
         required: true
     },
-});
+}, { timestamps: true });
 
 module.exports = mongoose.model('Chat', chatSchema);
