@@ -7,8 +7,8 @@ import cors from "cors";
 import nodemailer from "nodemailer";
 import { WebhookClient } from "dialogflow-fulfillment";
 import axios from "axios";
-import User from "./models/user.models.js";         // your registration model
-import Donation from "./models/donation.models.js"; // your donation model
+import User from "./models/user.models.js";         
+import Donation from "./models/donation.models.js"; 
 import { generateIdCardPDF } from "./utilities/idCardGenerator.js";
 import fs from "fs";
 import { generateDigitalId } from "./controllers/user.controller.js";
