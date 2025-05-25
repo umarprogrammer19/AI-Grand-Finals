@@ -18,6 +18,7 @@
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
+    "dialogflow-fulfillment": "^0.5.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
@@ -28,6 +29,7 @@
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
+    "@types/dialogflow-fulfillment": "^0.6.1",
     "nodemon": "^3.1.10"
   }
 }

@@ -1,6 +1,5 @@
 import Donation from "../models/donation.models.js";
 
-// POST /donations - Create a new donation
 export const createDonation = async (req, res) => {
     try {
         const { person, email, number } = req.body;

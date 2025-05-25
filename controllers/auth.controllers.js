@@ -11,7 +11,7 @@ export const registerUser = async (req, res) => {
         }
 
         const existingUser = await User.findOne({
-            $or: [{ email }],
+            $or: [{ cnic }],
         });
         if (!existingUser) {
             return res
@@ -41,7 +41,7 @@ export const signIn = async (req, res) => {
         if (!password) return res.status(400).json({ message: "Password is Required" });
 
         const user = await User.findOne({ email });
-        
+
         if (!user) return res.status(404).json({ message: "User Does Not Exists With This Email" });
 
         const isTruePassword = await bcrypt.compare(password, user.password);

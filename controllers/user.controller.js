@@ -5,7 +5,7 @@ import { generateIdCardPDF } from "../utilities/idCardGenerator.js";
 import { transporter } from "../utilities/transporter.js";
 import fs from "fs";
 
-function generateDigitalId() {
+export function generateDigitalId() {
     return "SID" + crypto.randomBytes(4).toString("hex").toUpperCase();
 }
 
@@ -93,7 +93,7 @@ export const registerUserOnCourse = async (req, res) => {
 export const renderCardByCNIC = async (req, res) => {
     try {
         const { cnic } = req.body;
-        
+
         if (!cnic) {
             return res.status(400).json({ error: "CNIC is required" });
         }
