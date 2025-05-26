@@ -38,19 +38,19 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// ✅ Gemini API Config
+// Gemini API Config
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 app.post("/webhook", async (req, res) => {
     const agent = new WebhookClient({ request: req, response: res });
 
-    // 🟢 Welcome intent
+    // Welcome intent
     function welcome(agent) {
         agent.add("👋 Assalamu Alaikum! Welcome to SMIT 💻\nHow can I assist you today?");
     }
 
-    // 📝 Course Registration intent
+    // Course Registration intent
     async function registration(agent) {
         const { name, cnic, email, phone, address, course } = agent.parameters;
 
@@ -112,7 +112,7 @@ app.post("/webhook", async (req, res) => {
         }
     }
 
-    // 💝 Donation intent
+    // Donation intent
     async function donation(agent) {
         const { name, email, number } = agent.parameters;
 
